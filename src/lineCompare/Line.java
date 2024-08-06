@@ -10,15 +10,19 @@ public class Line {
 		input();
 		
 		double line1 =calculateLength(x1,y1,x2,y2);
-		System.out.println("Length of Line : "+ line1);
+		System.out.println("Length of Line 1 : "+ line1);
 		double line2 =calculateLength(x3,y3,x4,y4);
-		System.out.println("Length of Line : "+ line2);
+		System.out.println("Length of Line 2 : "+ line2);
 		
-		if(Double.compare(line1, line2) == 0) {
-			System.out.println("The Two Lines are Equal!");
+		int comparison = Double.compare(line1, line2);
+		if( comparison > 0) {
+			System.out.println("The Line 1 is Longer than Line 2!");
+		}
+		else if(comparison < 0) {
+			System.out.println("The Line 1 is shorter than Line 2!");
 		}
 		else {
-			System.out.println("The Two Lines are not Equal!");
+			System.out.println("Both Lines are Equal");
 		}
 	}
 	
